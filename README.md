@@ -2,7 +2,7 @@
 
 A friendlier bvpsuite I used for my thesis project, New Methods for Optimising in Viscous Flow.
 
-This version has a nice main script which you can input lots and lots of boundary conditions as an array and very long differential equations without going through the GUI.
+This version has a nice main script (CallBvpsuite) which you can input lots and lots of boundary conditions as an array and very long differential equations without going through the GUI.
 
 Works with MATLAB R2020b.
 
