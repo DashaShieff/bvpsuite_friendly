@@ -1,4 +1,4 @@
-# the solver I wanted to hug
+# The solver I wanted to hug
 
 A friendlier bvpsuite I used for my thesis project, New Methods for Optimising in Viscous Flow.
 
