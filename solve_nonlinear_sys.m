@@ -582,7 +582,7 @@ delta_x = U\(L\(- F));         % Newton correction
             if log logstruct.runtime.resubstitute = [logstruct.runtime.resubstitute cputime-cpt]; end      
 
 if length(lastwarn)            % Exit if DF is singular
-   error(' System matrix is close to singular. Try a refined mesh or another initial approximation.');
+    error(' System matrix is close to singular. Try a refined mesh or another initial approximation.');
 end    
             
 G0 = norm(delta_x);            % Norm of the Newton correction

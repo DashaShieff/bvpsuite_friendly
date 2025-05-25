@@ -1582,7 +1582,7 @@ fclose(datei);
 %C: ende der funktion mfileschreiben
 
 
-
+%%%%%%%%
 function ret=prepdiff(g,antwort1,dimension,antwort3,antwort4,antwort5,antwort6,antwort7,ordnung,parameter)
 
 %Erkennen der vorkommenden z und markieren durch den String xyq...
@@ -1674,7 +1674,7 @@ catch
     g=g(z,p,str2sym('t'));
 end
 ret=g;
-
+%%%%%%%%
 function ret=prepdiffr(r,antwort1,dimension,antwort3,antwort4,antwort5,antwort6,antwort7,o,parameter)
 
 for oi=o-1:-1:0
@@ -1782,7 +1782,7 @@ catch
 end
 ret=r;
 
-
+%%%%%%%%
 
 function ret=prepdiffr_c(r,antwort1,dimension,antwort3,antwort4,antwort5,antwort6,antwort7,o,parameter,c)
 
@@ -2065,7 +2065,7 @@ r=strrep(r,'=','-(');
     
     
 ret=r;
-
+%%%%%%%%%%%
 function ret=prepausgaber_c(r,antwort1,dimension,antwort3,antwort4,antwort5,antwort6,antwort7,o,parameter,c)
 
 for oi=o-1:-1:0
@@ -2189,7 +2189,7 @@ r=strrep(r,'xyq','z');
 r=strrep(r,'yxq','p');
 r=strrep(r,'abs(','abs1(');
 ret=r;
-
+%%%%%%%%
 function ret=prepausgaberdiff_c(r,antwort1,dimension,antwort3,antwort4,antwort5,antwort6,antwort7,o,parameter,c)
 for oi=o:-1:0
     for ni=str2num(char(dimension)):-1:1

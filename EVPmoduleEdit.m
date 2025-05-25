@@ -1,4 +1,4 @@
-function [antwort2,antwort6,antwort7] = EVPmoduleEdit(antwort2,antwort6x,antwort7x)  
+ function [antwort2,antwort6,antwort7] = EVPmoduleEdit(antwort2,antwort6x,antwort7x)  
 %************************************************************************
 % EVPMODULE recasts an Eigenvalue Problem into a Boundary Value Problem
 % by adding two additional equations and boundary conditions
@@ -69,7 +69,7 @@ function [antwort2,antwort6,antwort7] = EVPmoduleEdit(antwort2,antwort6x,antwort
    %*****************************************************
    
    hilfsvar2=strcat('z1''^2');
-   
+   %hilfsvar2=strcat("z1'");
    
    antwort6_new = regexp(antwort6,'[^;]*','match');
    
@@ -77,7 +77,8 @@ function [antwort2,antwort6,antwort7] = EVPmoduleEdit(antwort2,antwort6x,antwort
      
    c=antwort6_new{1};
    hilfsvar2 = strcat('sqrt(',hilfsvar2,'+','1',')');
-      
+   %hilfsvar2 = strcat('((1.2919).*',hilfsvar2,' - (2.7925).*',hilfsvar2,')./((1 + ',hilfsvar2,'.^2))');
+   
    antwort6=strcat(antwort6,hilfsvar,'=',hilfsvar2,';');
    antwort6= strcat(char(antwort6),']');
 
@@ -101,5 +102,6 @@ function [antwort2,antwort6,antwort7] = EVPmoduleEdit(antwort2,antwort6x,antwort
         end
 
 
-   antwort7=strcat(antwort7,strcat('z',num2str(length(ord)+2),'(a)','=0;'),strcat('z',num2str(length(ord)+2),'(b)','= 1.22649;'));
+   antwort7=strcat(antwort7,strcat('z',num2str(length(ord)+2),'(a)','=0;'),strcat('z',num2str(length(ord)+2),'(b)','=',num2str(1),';'));
+   %antwort7=strcat(antwort7,strcat('z',num2str(length(ord)+2),'(a)','=0;'),strcat('z',num2str(length(ord)+2),'''(b)','= -0.7503;'));
    antwort7= strcat(char(antwort7),']');

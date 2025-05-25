@@ -154,7 +154,7 @@ else
     systemmatrix=equations('DF',x0,bvpfile,x1,[],praediktor,psival,psi,linear);
     residuum=equations('F',x0,bvpfile,x1,[],praediktor,psival,psi,linear);
     coeff=-systemmatrix\residuum;
-end;
+end
 %Dasha Edit - fudge polynomials output as error.
 %Einschub
 % outputDF=DF(bvpfile,coeff,x1,bvpopt,parameters);
@@ -165,7 +165,7 @@ if length(coeff)>feval(bvpfile,'parameter')
         polynomials=equations('polynom',coeff,bvpfile,x1,[],[],psival,psi);
         valx1=equations('valx1',coeff,bvpfile,x1,[],[],psival,psi);
     else
-        %polynomials=[];
+        polynomials=[];
         valx1=[];
     end    
     
